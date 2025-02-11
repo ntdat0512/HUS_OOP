@@ -1,12 +1,18 @@
+import java.util.Scanner;
+//Print factorial of n
 public class Factorial {
-    public static void main(String[] args) {
-        int n = 20;
-        long factorial = 1;
-
-//        n! = 1*2*3*...*n
-        for(int i=1; i<=n; i++){
-            factorial = factorial * i;
+    public static long factorial(int n) {
+        long result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
         }
-        System.out.println("The factorial of" + n + " is " + factorial);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter n: ");
+        int n = scanner.nextInt();
+        System.out.println("Factorial of " + n + " is " + factorial(n));
     }
 }
